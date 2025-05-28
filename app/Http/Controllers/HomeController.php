@@ -158,7 +158,7 @@ class HomeController extends Controller
             
         } else {
             if (!file_exists(storage_path() . "/installed")) {
-                header('location:install');
+        
                 //die;
             } else {
                 if (Utility::getValByName('display_landing_page') == 'on') {
@@ -243,7 +243,7 @@ class HomeController extends Controller
     {
 
         if (!file_exists(storage_path() . "/installed")) {
-            header('location:install');
+          
             die;
         } else {
             $local = parse_url(config('app.url'))['host'];
